@@ -40,8 +40,7 @@ def sum_until_limit(limit):
     for i in range(1, limit):
         if sum != limit:
             final_total = sum + i
-    print(final_total)
-sum_until_limit(10)        
+    return final_total        
 
 # 6. Write a function factorial(n) using a loop (no recursion allowed).
 def factorial(n):
@@ -53,15 +52,30 @@ def factorial(n):
 
 # 7. Write a function count_digits(number) that counts how many digits are in a positive integer using a loop.
 def count_digits(number):
-    
+    number_of_postive = 0
+
+    for i in str(number):
+        if str(i) > "0":
+            number_of_postive += 1
+
+    return number_of_postive
 
 
 # 8. Write a function reverse_number(n) that reverses a number using loops (e.g., 1234 → 4321).
+def reverse_number(n):
+    new = str(n)
+    new = new[::-1]
+    return int(new)
 
 
 
 # 9. Write a function multiplication_table(n) that prints the multiplication table of n from 1 to 10 using a loop.
+def multiplication_table(n):
+    for i in range(1, 11):
+        print(f"{i} * {n} = {i * n}")
+print(multiplication_table(2))
 
 
-
-# 10. Write a function print_pyramid(n) that prints a centered pyramid pattern of stars with n levels using nested loops.
+# 10. Write a function print_pyramid(n) that prints a centered pyramid pattern of stars with n levels using nested loops.\
+def print_pyramid(n):
+    pass
