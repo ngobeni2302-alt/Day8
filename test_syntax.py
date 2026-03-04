@@ -39,10 +39,9 @@ class TestAdvancedLoops(unittest.TestCase):
         lines = output.split("\n")
         self.assertEqual(len(lines), 4)
 
-    # 5. sum_until_limit
     def test_sum_until_limit(self):
         output = self.capture_output(loops.sum_until_limit, 10)
-        self.assertTrue(output.isdigit())
+        self.assertEqual(output.strip(), "10")
 
     # 6. factorial
     def test_factorial(self):

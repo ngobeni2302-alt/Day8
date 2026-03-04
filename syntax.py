@@ -36,11 +36,16 @@ print_number_triangle(5)
 
 # 5. Write a function sum_until_limit(limit) that keeps adding consecutive numbers starting from 1 until the total is greater than or equal to limit. Print the final total.
 def sum_until_limit(limit):
-    sum = 0
-    for i in range(1, limit):
-        if sum != limit:
-            final_total = sum + i
-    return final_total        
+    total = 0
+    number = 1
+    
+    while total < limit:
+        total += number
+        number += 1
+        
+    print(total)
+
+print(sum_until_limit(10))        
 
 # 6. Write a function factorial(n) using a loop (no recursion allowed).
 def factorial(n):
@@ -78,4 +83,15 @@ print(multiplication_table(2))
 
 # 10. Write a function print_pyramid(n) that prints a centered pyramid pattern of stars with n levels using nested loops.\
 def print_pyramid(n):
-    pass
+    # Function to print full pyramid pattern
+    for i in range(1, n + 1):
+        # Print leading spaces
+        for j in range(n - i):
+            print(" ", end="")
+        
+        # Print asterisks for the current row
+        for k in range(1, 2*i):
+            print("*", end="")
+        print()
+   
+print_pyramid(4)
